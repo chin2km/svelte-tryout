@@ -3,6 +3,7 @@
   import { ui, TABS } from "../stores/ui.js";
   import { escapeHandler } from "../hooksalike/escapeHandler.js";
   import { createEventDispatcher, onMount } from "svelte";
+  import { fade } from "svelte/transition";
   const dispatch = createEventDispatcher();
 
   let inputText = "";
@@ -87,7 +88,7 @@
   }
 </style>
 
-<div class="layout" on:click={() => ui.setInputBoxShown(false)}>
+<div transition:fade class="layout" on:click={() => ui.setInputBoxShown(false)}>
   <input
     bind:this={inputElement}
     on:click|stopPropagation
