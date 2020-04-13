@@ -32,7 +32,6 @@
     backdrop-filter: blur(10px);
     position: fixed;
     bottom: 0;
-    padding: 10px;
     box-shadow: 0px -1px 20px 0px #e2e2e2;
     z-index: 1;
     height: 70px;
@@ -47,9 +46,9 @@
     box-shadow: 0px -1px 20px 0px #e2e2e2;
     border-radius: 100%;
     overflow: hidden;
-    height: 80px;
+    height: 65px;
+    width: 65px;
     display: flex;
-    width: 80px;
     justify-content: center;
     align-items: center;
     position: fixed;
@@ -71,14 +70,19 @@
     justify-content: space-around;
     width: 100%;
     font-size: 23px;
+    padding: 10px;
   }
 
   .groups .block {
     padding: 10px;
-    width: 100%;
     margin: 10px;
     border-radius: 20px;
     cursor: pointer;
+    flex-shrink: 1;
+    width: 33%;
+    max-width: 33%;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   .groups .block.active,
