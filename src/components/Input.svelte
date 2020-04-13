@@ -1,6 +1,6 @@
 <script>
   import Add from "../images/checkmark-active.svg";
-  import { ui } from "../stores/ui.js";
+  import { ui, TABS } from "../stores/ui.js";
   import { escapeHandler } from "../hooksalike/escapeHandler.js";
   import { createEventDispatcher, onMount } from "svelte";
   const dispatch = createEventDispatcher();
@@ -22,6 +22,7 @@
   const addToDo = () => {
     if (inputText.trim()) {
       ui.setInputBoxShown(false);
+      ui.setActiveTab(TABS.ALL);
 
       dispatch("addToDo", {
         text: inputText
