@@ -1,30 +1,54 @@
-<script>
-	export let name;
+<script lang="ts">
+  import ToDos from "./components/ToDos.svelte";
+  import Footer from "./components/Footer.svelte";
+  import Add from "./images/add.svg";
+
+  export let name;
 </script>
 
-<main>
-	<h1>Hello {name}!</h1>
-	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
-</main>
-
 <style>
-	main {
-		text-align: center;
-		padding: 1em;
-		max-width: 240px;
-		margin: 0 auto;
-	}
+  :global(body),
+  :global(html) {
+    margin: 0;
+    padding: 0;
+    font-family: "Ubuntu", sans-serif;
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
 
-	h1 {
-		color: #ff3e00;
-		text-transform: uppercase;
-		font-size: 4em;
-		font-weight: 100;
-	}
+  :global(body) {
+    display: flex;
+  }
 
-	@media (min-width: 640px) {
-		main {
-			max-width: none;
-		}
-	}
+  * {
+    user-select: none;
+  }
+
+  .main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .header {
+    display: flex;
+    justify-content: center;
+    font-size: 50px;
+    text-align: center;
+    width: 100%;
+    background: #ffffff61;
+    backdrop-filter: blur(10px);
+    position: fixed;
+    top: 0;
+    padding: 10px;
+    box-shadow: -2px 8px 20px 0px #dadada59;
+    z-index: 1;
+  }
 </style>
+
+<div class="main">
+  <div class="header">{name}</div>
+  <ToDos />
+  <Footer />
+</div>
