@@ -2,7 +2,7 @@
 
 Trying out svelte to create a todo application during this `corona time`
 
-# demo -> [TuTuDo](https://chin2km.github.io/svelte-tryout/public)
+# demo -> [TuTuDo](https://chin2km.github.io/svelte-tryout)
 
 ```
 yarn

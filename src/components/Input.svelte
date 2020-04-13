@@ -63,6 +63,12 @@
     outline: none !important;
   }
 
+  @media screen and (max-width: 600px) {
+      input::placeholder {
+        font-size: 0.7rem;
+      }
+}
+
   .add {
     background: #ffffff;
     backdrop-filter: blur(10px);
@@ -76,7 +82,7 @@
     align-items: center;
     cursor: pointer;
     margin: 0 10px;
-    margin-top: -6px;
+    margin-top: -2px;
   }
 
   .add .svg {

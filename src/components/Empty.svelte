@@ -56,7 +56,7 @@
   }
 
   .svg {
-    transform: scale(14.5);
+    transform: scale(10.5);
     opacity: 0.1;
     fill: #848484;
   }
