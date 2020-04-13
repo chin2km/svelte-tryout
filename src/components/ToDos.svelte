@@ -34,7 +34,6 @@
   .content {
     padding-top: 100px;
     padding-bottom: 100px;
-    height: calc(100% - 100px);
   }
 </style>
 
