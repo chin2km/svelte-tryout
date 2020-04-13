@@ -33,8 +33,7 @@
 <style>
   .content {
     padding-top: 100px;
-    padding-bottom: 150px;
-    height: 100%;
+    padding-bottom: 100px;
   }
 </style>
 
