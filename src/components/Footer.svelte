@@ -27,12 +27,12 @@
     align-items: center;
     font-size: 50px;
     text-align: center;
-    width: calc(100% - 170px);
+    width: calc(100% - 120px);
     background: #ffffff61;
     backdrop-filter: blur(10px);
     position: fixed;
     bottom: 0;
-    box-shadow: 0px -1px 20px 0px #e2e2e2;
+    box-shadow: 0px 0px 20px 0px #e2e2e2;
     z-index: 1;
     height: 70px;
     border-radius: 30px;
@@ -43,7 +43,7 @@
   .add {
     background: #ffffff;
     backdrop-filter: blur(10px);
-    box-shadow: 0px -1px 20px 0px #e2e2e2;
+    box-shadow: 0px 0px 20px 0px #e2e2e2;
     border-radius: 100%;
     overflow: hidden;
     height: 65px;
@@ -69,7 +69,7 @@
     display: flex;
     justify-content: space-around;
     width: 100%;
-    font-size: 23px;
+    font-size: 18px;
     padding: 10px;
   }
 
@@ -83,6 +83,7 @@
     max-width: 33%;
     overflow: hidden;
     text-overflow: ellipsis;
+    transition: all 0.2s ease-in-out;
   }
 
   .groups .block.active,

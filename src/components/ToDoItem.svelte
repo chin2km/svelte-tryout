@@ -1,5 +1,5 @@
 <script>
-  import { slide } from "svelte/transition";
+  import { slide, fly } from "svelte/transition";
   import { createEventDispatcher } from "svelte";
   import Active from "../images/checkmark-active.svg";
   import Inactive from "../images/checkmark-inactive.svg";
@@ -8,6 +8,7 @@
   const dispatch = createEventDispatcher();
 
   export let todo;
+  export let index;
 
   const handleClick = () => {
     dispatch("todoItemClick", {
@@ -40,6 +41,9 @@
 
   .text {
     flex-grow: 1;
+    color: #8c8c8c;
+    font-weight: bold;
+    font-size: 1.1rem;
   }
 
   .icon {
@@ -57,7 +61,10 @@
   }
 </style>
 
-<div transition:slide class="item {todo.completed && 'completed'}" on:click={handleClick}>
+<div
+  transition:slide="{{delay: (100*index)}}"
+  class="item {todo.completed && 'completed'}"
+  on:click={handleClick}>
   <div class="icon">
     {@html todo.completed ? Active : Inactive}
   </div>

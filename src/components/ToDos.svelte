@@ -39,9 +39,10 @@
 </style>
 
 <div class="content">
-  {#each displayedTodos as todo}
+  {#each displayedTodos as todo, index}
     <ToDoItem
       {todo}
+      index={index}
       on:todoItemClick={handleSelect}
       on:todoItemDelete={handleDelete} />
   {:else}
