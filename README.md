@@ -1,8 +1,12 @@
 # Tu-tu-do svelte todo app
 
-Trying svelte to create a todo application
+Trying out svelte to create a todo application during this `corona time`
 
 # demo -> [TuTuDo](https://chin2km.github.io/svelte-tryout/public)
+
+```
+yarn
+```
 
 ## dev
 ```

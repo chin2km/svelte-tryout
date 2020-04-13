@@ -74,7 +74,7 @@
   }
 
   .groups .block {
-    padding: 13px;
+    padding: 10px;
     width: 100%;
     margin: 10px;
     border-radius: 20px;

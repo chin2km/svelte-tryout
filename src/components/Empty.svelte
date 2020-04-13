@@ -3,6 +3,8 @@
   import Active from "../images/checkmark-active.svg";
   import Inactive from "../images/checkmark-inactive.svg";
   import { TABS } from "../stores/ui.js";
+  import { fade } from "svelte/transition";
+
   export let activeTab;
 
   $: message = {
@@ -60,14 +62,40 @@
   }
 </style>
 
-<div class="empty">
-  <div class="text">
-    <h3>{message.header}</h3>
-    <div>{message.message}</div>
-  </div>
-  <div class="icon">
-    <div class="svg">
-      {@html message.icon}
+{#if activeTab === TABS.ALL}
+  <div in:fade={{delay: 500}} out:fade class="empty">
+    <div class="text">
+      <h3>{message.header}</h3>
+      <div>{message.message}</div>
+    </div>
+    <div class="icon">
+      <div class="svg">
+        {@html message.icon}
+      </div>
     </div>
   </div>
-</div>
+{:else if activeTab === TABS.ACTIVE}
+  <div in:fade={{delay: 500}} out:fade class="empty">
+    <div class="text">
+      <h3>{message.header}</h3>
+      <div>{message.message}</div>
+    </div>
+    <div class="icon">
+      <div class="svg">
+        {@html message.icon}
+      </div>
+    </div>
+  </div>
+{:else}
+  <div in:fade={{delay: 500}} out:fade class="empty">
+    <div class="text">
+      <h3>{message.header}</h3>
+      <div>{message.message}</div>
+    </div>
+    <div class="icon">
+      <div class="svg">
+        {@html message.icon}
+      </div>
+    </div>
+  </div>
+{/if}
